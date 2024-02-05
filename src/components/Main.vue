@@ -1,8 +1,8 @@
 <template>
 
-  <div class="sticky z-20 flex h-14 items-center justify-between border-t border-b border-border-200 bg-white py-3 px-5 md:h-16 lg:px-6
-  xl:hidden top-[58px] lg:top-[84px]">
-    <button class="flex h-8 items-center rounded border border-border-200 bg-gray-100 bg-opacity-90 py-1 px-3 text-sm font-semibold
+
+  <div class="sticky z-20 flex h-14 items-center justify-between border-t border-b border-border-200 bg-white py-3 px-5 md:h-16 lg:px-6 xl:hidden top-[58px] lg:top-[84px]">
+    <button  @click="emit('toggle-sidebar')" class="flex h-8 items-center rounded border border-border-200 bg-gray-100 bg-opacity-90 py-1 px-3 text-sm font-semibold
     text-heading transition-colors duration-200 hover:border-accent-hover hover:bg-accent hover:text-light focus:border-accent-hover
     focus:bg-accent focus:text-light focus:outline-0 md:h-10 md:py-1.5 md:px-4 md:text-base">
      <AdjustmentsHorizontalIcon class="h-5 w-5"/> Filter</button>
@@ -111,4 +111,8 @@
 <script setup>
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import {WrenchScrewdriverIcon, AdjustmentsHorizontalIcon,ChevronDownIcon} from '@heroicons/vue/24/outline'
+
+
+
+const emit = defineEmits(['toggle-sidebar'])
 </script>

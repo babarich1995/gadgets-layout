@@ -1,5 +1,6 @@
  <template>
-    <header id="site-header" class="site-header-with-search top-0 z-50 w-full transition-all sticky lg:fixed lg:h-22 shadow-md bg-slate-50">
+    <header id="site-header" class="site-header-with-search top-0 z-50 w-full transition-all sticky
+    lg:fixed lg:h-22 shadow-md bg-slate-50 p-3">
         <div class="fixed inset-0 -z-10 h-[100vh] w-full bg-black/50 hidden">
 
         </div>
