@@ -1,18 +1,19 @@
 <script setup>
-
+import {HomeModernIcon,ShoppingCartIcon,MusicalNoteIcon,ServerIcon} from '@heroicons/vue/24/outline'
+const emit = defineEmits(['toggle-mobile'])
 </script>
 
 <template>
 
     <aside
-        class="fixed  inset-0 z-50 h-full overflow-hidden">
+        class="fixed  inset-0 z-50 h-full w-72 overflow-hidden">
       <div class="absolute inset-0 overflow-hidden">
         <div class="absolute inset-0 bg-dark bg-opacity-40" style="opacity: 1;"></div>
         <div class="absolute inset-y-0 flex max-w-full outline-none ltr:left-0 rtl:left-0">
         <div class="h-full w-screen max-w-md">
           <div class="drawer flex h-full flex-col bg-light text-base shadow-xl">
             <div class="flex h-full flex-col">
-              <div class="fixed top-0 z-20 flex w-full max-w-md items-center justify-between border-b border-border-200
+              <div class="fixed top-0 z-20 flex w-72 max-w-md items-center justify-between border-b border-border-200
               border-opacity-75 bg-white p-5 px-5 md:px-6">
                 <a class="inline-flex w-24 md:w-auto" href="/">
                   <span class="relative h-[2.125rem] w-32 overflow-hidden md:w-[8.625rem] text-emerald-700 font-semibold">
@@ -21,7 +22,8 @@
                 </a>
                 <button class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-200 text-body
                 transition-all duration-200 hover:bg-accent hover:text-light focus:bg-accent
-                focus:text-light focus:outline-0"><span class="sr-only">close</span>
+                focus:text-light focus:outline-0"
+                @click="emit('toggle-mobile')"><span class="sr-only">close</span>
                   <svg class="h-2.5 w-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1
                     1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -38,26 +40,30 @@
                           <div class="px-5">
                             <ul class="text-xs xl:py-8 mt-10">
                               <li class="rounded-md py-1" style="background-color: rgb(255, 255, 255);">
-                                <button class="flex w-full items-center py-2 font-semibold text-body-dark outline-none transition-all ease-in-expo  focus:text-accent focus:outline-0 focus:ring-0 ltr:text-left rtl:text-right text-body-dark text-sm">
-                                  Home
+                                <button class="flex w-full items-center py-2 font-semibold text-body-dark outline-none
+                                transition-all ease-in-expo  focus:text-accent focus:outline-0 focus:ring-0  text-gray-700 text-sm">
+                                  <HomeModernIcon  class="w-4 h-4 mr-2"/> Home
                                 </button>
 
                               </li>
                               <li class="rounded-md py-1" style="background-color: rgb(255, 255, 255);">
-                                <button class="flex w-full items-center py-2 font-semibold text-body-dark outline-none transition-all ease-in-expo  focus:text-accent focus:outline-0 focus:ring-0 ltr:text-left rtl:text-right text-body-dark text-sm">
-                                  Home
+                                <button class="flex w-full items-center py-2 font-semibold text-body-dark outline-none transition-all
+                                ease-in-expo  focus:text-accent focus:outline-0 focus:ring-0  text-gray-700 text-sm">
+                                  <ShoppingCartIcon  class="w-4 h-4 mr-2"/>  Cart
                                 </button>
 
                               </li>
                               <li class="rounded-md py-1" style="background-color: rgb(255, 255, 255);">
-                                <button class="flex w-full items-center py-2 font-semibold text-body-dark outline-none transition-all ease-in-expo  focus:text-accent focus:outline-0 focus:ring-0 ltr:text-left rtl:text-right text-body-dark text-sm">
-                                  Home
+                                <button class="flex w-full items-center py-2 font-semibold text-body-dark outline-none transition-all
+                                 ease-in-expo  focus:text-accent focus:outline-0 focus:ring-0  text-gray-700 text-sm">
+                                  <MusicalNoteIcon  class="w-4 h-4 mr-2"/>   Sound Bars
                                 </button>
 
                               </li>
                               <li class="rounded-md py-1" style="background-color: rgb(255, 255, 255);">
-                                <button class="flex w-full items-center py-2 font-semibold text-body-dark outline-none transition-all ease-in-expo  focus:text-accent focus:outline-0 focus:ring-0 ltr:text-left rtl:text-right text-body-dark text-sm">
-                                  Home
+                                <button class="flex w-full items-center py-2 font-semibold text-body-dark outline-none transition-all ease-in-expo
+                                focus:text-accent focus:outline-0 focus:ring-0  text-gray-700 text-sm">
+                                  <ServerIcon  class="w-4 h-4 mr-2"/>  Settings
                                 </button>
 
                               </li>
@@ -85,6 +91,7 @@
 
 
     </aside>
+
 
 </template>
 
